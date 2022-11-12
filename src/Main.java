@@ -36,18 +36,21 @@ public class Main {
         productList.addProduct(orange);
         productList.addProduct(pear);
 
-        System.out.println(productList.toString());
+        //System.out.println(productList.toString());
 
 
         //productList.addProduct(apple);
 
-        Recipe fruitSalad = new Recipe(
-                "Фруктовый салат",
-                Set.of(apple,banana, orange, pear));
+        Recipe fruitSalad = new Recipe("Фруктовый салат");
+        fruitSalad.addProduct(apple,2);
+        fruitSalad.addProduct(banana, 3);
+        fruitSalad.addProduct(orange);
+        fruitSalad.addProduct(pear,1);
 
         System.out.println(fruitSalad.toString());
 
-        numbersSet();
+        System.out.println("Стоимость рецепта: " + fruitSalad.getRecipeCost());
+
 
 
     }
